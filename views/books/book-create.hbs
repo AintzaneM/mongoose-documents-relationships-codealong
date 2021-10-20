@@ -5,8 +5,16 @@
     <input type="text" name="title" />
   </label>
 
-  <label> Author:
-    <input type="text" name="author" />
+  <label> Choose an  Author:
+    
+    <select id="author" name="author">
+      {{#each authorsArr}}
+
+      <option value="{{this._id}}">{{this.name}} {{this.surname}}</option>
+      
+      {{/each}}
+    </select>
+    
   </label>
 
   <label> Description:
